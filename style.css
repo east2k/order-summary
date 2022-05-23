@@ -10,11 +10,13 @@
     --dark-blue: hsl(223, 47%, 23%);
 
     --regular-text: 16px;
+    --mobile-text: 13px;
 
     --max-width-wrapper: 1440px;
     --min-width-wrapper: 375px;
 
     --margin-section-divider: 15px;
+
 }
 
 * {
@@ -49,6 +51,7 @@
     background-color: var(--very-pale-blue);
     border-radius: 15px;
     overflow: hidden;
+    box-shadow: 0px 15px 50px -25px hsl(245deg 75% 52% / 30%);
 }
 
 .order-header-img {
@@ -171,4 +174,54 @@
 
 .inactive-button:hover {
     color: var(--dark-blue);
+}
+
+@media only screen and (max-width: 375px) {
+
+    .order-wrapper{
+        background: linear-gradient(to bottom, hsl(224deg 52% 81% / 40%), hsl(224deg 100% 94%)),
+            url("images/pattern-background-mobile.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .order-container {
+        width: 300px;
+        height: 500px;
+    }
+
+    .order-header-img {
+        margin-bottom: 15px;
+    }
+
+    .order-header-img img {
+        width: 100%;
+    }
+
+    .order-body h1 {
+        font-size: 25px;
+    }
+
+    .order-body p {
+        font-size: var(--mobile-text);
+        line-height: 20px;
+    }
+
+    .order-price-plan {
+        height: 60px;
+        padding: 0 10px;
+        width: 85%;
+    }
+
+    .order-type, .order-price, .order-change {
+        font-size: var(--mobile-text);
+    }
+
+    .order-buttons {
+        width: 85%;
+    }
+    .order-buttons button{
+        font-size: var(--mobile-text);
+        height: 45px;
+    }
 }
